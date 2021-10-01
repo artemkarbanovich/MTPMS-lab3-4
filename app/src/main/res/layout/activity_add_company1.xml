@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCompany1"
+    android:layout_margin="10dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <EditText
+        android:id="@+id/edtTxtCompanyName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:hint="Введите название компании"/>
+
+    <EditText
+        android:id="@+id/edtTxtDateFoundation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtCompanyName"
+        android:layout_marginTop="10dp"
+        android:hint="Введите дату основания"
+        android:inputType="date"/>
+
+    <EditText
+        android:id="@+id/edtTxtCompanyEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtDateFoundation"
+        android:layout_marginTop="10dp"
+        android:hint="Введите email"
+        android:inputType="textEmailAddress"/>
+
+    <CheckBox
+        android:id="@+id/chckBxIsBelCompany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="Является ли компания белорусской?"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtCompanyEmail"/>
+
+    <Button
+        android:id="@+id/btnToMain"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="На главную"
+        android:layout_marginLeft="10dp"
+        android:textSize="13dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="toMainActivity"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Далее"
+        android:textSize="13dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="nextActivity"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCompany2"
+    android:layout_margin="10dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <Spinner
+        android:id="@+id/spnrBusinessBranch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/edtTxtEmployeesNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spnrBusinessBranch"
+        android:layout_marginTop="15dp"
+        android:hint="Введите количество сотрудников"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/edtTxtCapitalizationCost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtEmployeesNum"
+        android:layout_marginTop="10dp"
+        android:hint="Введите капитализацию ($)"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/edtTxtWebsiteLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtCapitalizationCost"
+        android:layout_marginTop="10dp"
+        android:hint="Вставьте ссылку на веб-сайт компании"/>
+
+    <Button
+        android:id="@+id/btnPrev"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Назад"
+        android:layout_marginLeft="10dp"
+        android:textSize="13dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="prevActivity"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Далее"
+        android:textSize="13dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="nextActivity"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

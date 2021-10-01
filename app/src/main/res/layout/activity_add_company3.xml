@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCompany3"
+    android:fillViewport="true"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+    <EditText
+        android:id="@+id/edtTxtRepresName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:hint="Введите имя представителя"/>
+
+    <EditText
+        android:id="@+id/edtTxtRepresSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtRepresName"
+        android:layout_marginTop="10dp"
+        android:hint="Введите фамилию представителя"/>
+
+    <TextView
+        android:id="@+id/txtBirthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Дата рождения"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="6.5dp"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtRepresSurname"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <DatePicker
+        android:id="@+id/dtPcrRepresBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBirthday"
+        android:calendarViewShown="false"/>
+
+    <EditText
+        android:id="@+id/edtTxtRepresPositionInCompany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dtPcrRepresBirthday"
+        android:hint="Введите должность в компании"/>
+
+    <EditText
+        android:id="@+id/edtTxtRepresPhoneNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtRepresPositionInCompany"
+        android:layout_marginTop="10dp"
+        android:hint="Введите номер телефона"
+        android:inputType="phone"/>
+
+    <ImageView
+        android:id="@+id/imgRepresPhoto"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:src="@drawable/empty_repres_photo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtRepresPhoneNum"/>
+
+    <Button
+        android:id="@+id/btnAddPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добавить&#10;фото"
+        android:layout_marginTop="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtRepresPhoneNum"
+        app:layout_constraintLeft_toRightOf="@id/imgRepresPhoto"
+        android:onClick="addPhoto"/>
+
+    <Button
+        android:id="@+id/btnPrev"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Назад"
+        android:layout_marginLeft="10dp"
+        android:textSize="13dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/imgRepresPhoto"
+        android:onClick="prevActivity"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Далее"
+        android:textSize="13dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imgRepresPhoto"
+        android:onClick="nextActivity"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
